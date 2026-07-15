@@ -381,8 +381,6 @@ var locMonthly2025Ytd={};
     return Math.round(v*allMonthly2025Ytd[m]/allMonthly2025[m]);
   });
 });
-monthlyChart.data.datasets[1].data=allMonthly2025Ytd;
-monthlyChart.update();
 
 // --- KPI Filter Tabs ---
 document.getElementById('locTabs').addEventListener('click',function(e){
@@ -439,10 +437,10 @@ document.getElementById('chartLocTabs').addEventListener('click',function(e){
   var loc=tab.dataset.loc;
   if(loc==='all'){
     monthlyChart.data.datasets[0].data=allMonthly;
-    monthlyChart.data.datasets[1].data=allMonthly2025Ytd;
+    monthlyChart.data.datasets[1].data=allMonthly2025;
   } else {
     monthlyChart.data.datasets[0].data=locMonthly[loc]||[0,0,0,0,0,0,0,0,0,0,0,0];
-    monthlyChart.data.datasets[1].data=locMonthly2025Ytd[loc]||[0,0,0,0,0,0,0,0,0,0,0,0];
+    monthlyChart.data.datasets[1].data=locMonthly2025[loc]||[0,0,0,0,0,0,0,0,0,0,0,0];
   }
   monthlyChart.update();
 });
