@@ -197,8 +197,8 @@
     <div class="metric-row has-tooltip" data-calc="$361,671 vs $343,703 in 2025 = +5.2%."><div class="metric-label">June<small>Up 5% (+$18K) vs. 2025</small></div><div class="metric-value" class="pos">$362K <span class="info-icon">i</span></div></div>
     <div class="metric-row has-tooltip" data-calc="$126,485 vs $117,286 in 2025 (same 11 days) = +7.8%."><div class="metric-label">July<small>Partial - 11 days · +$9K</small></div><div class="metric-value" style="color:var(--muted)">$126K <span class="info-icon">i</span></div></div>
     <hr class="divider">
-    <div class="metric-row has-tooltip" data-calc="$2,076,579 ÷ 163 normal selling days. Excludes Merrie Monarch + Smith 10."><div class="metric-label" style="font-weight:700">Avg daily (normal)<small>163 days — excludes events</small></div><div class="metric-value" style="color:var(--accent)">$12,740 <span class="info-icon">i</span></div></div>
-    <div class="metric-row has-tooltip" data-calc="Merrie Monarch: $661K/6 days = $110K/day. Smith 10: $287K/3 days = $96K/day. Combined: 31% of YTD."><div class="metric-label" style="font-weight:700">Avg daily (events)<small>9 days — MM + Smith 10</small></div><div class="metric-value pos">$105,396 <span class="info-icon">i</span></div></div>
+    <div class="metric-row has-tooltip" data-calc="$2,221,826 ÷ 174 normal selling days. Excludes Merrie Monarch + Smith 10."><div class="metric-label" style="font-weight:700">Avg daily (normal)<small>174 days — excludes events</small></div><div class="metric-value" style="color:var(--accent)">$12,769 <span class="info-icon">i</span></div></div>
+    <div class="metric-row has-tooltip" data-calc="Merrie Monarch: $661K/6 days = $110K/day. Smith 10: $261K/3 days = $87K/day. Combined: 29% of YTD."><div class="metric-label" style="font-weight:700">Avg daily (events)<small>9 days — MM + Smith 10</small></div><div class="metric-value pos">$102,534 <span class="info-icon">i</span></div></div>
   </div></div>
 
 </div>
@@ -217,7 +217,7 @@ var ytdTotal=0;for(var i=0;i<dailyData.length;i++)ytdTotal+=dailyData[i];
 var sellingDays=0;for(var i=0;i<dailyData.length;i++)if(dailyData[i]>0)sellingDays++;
 var avgPerSellingDay=ytdTotal/sellingDays;var fy2025=5402395;var daysElapsed=192;var totalDays=365;
 var pctYear=Math.round(daysElapsed/totalDays*100);
-var baselineAvg=12740;var sellingRatio=183/192;var holidayLift=0.64;
+var baselineAvg=12769;var sellingRatio=183/192;var holidayLift=0.64;
 var novStart=304;var projRemaining=0;
 for(var i=daysElapsed;i<365;i++){var daily=i>=novStart?baselineAvg*(1+holidayLift):baselineAvg;projRemaining+=daily*sellingRatio}
 var projectedYear=Math.round(ytdTotal+projRemaining);
@@ -245,7 +245,7 @@ h += '</div>';
 h += '<div style="flex:1;min-width:260px;text-align:center;padding:18px 14px;background:#fef6e8;border-radius:10px">';
 h += '<div style="font-size:0.78rem;color:#7a6a55;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-weight:700">Projected Full Year</div>';
 h += '<div style="font-size:1.8rem;font-weight:700;color:#2a7a30">' + projFmt + ' <span style="font-size:1rem;color:#2a7a30">&#x2191; ' + projPct + '% vs. last year</span></div>';
-h += '<div style="font-size:0.82rem;color:#7a6a55;margin-top:4px">baseline $12.7K/day + 64% holiday lift (Nov-Dec)</div>';
+h += '<div style="font-size:0.82rem;color:#7a6a55;margin-top:4px">baseline $12.8K/day + 64% holiday lift (Nov-Dec)</div>';
 h += '</div></div>';
 h += '<div class="has-tooltip" style="cursor:default" data-calc="' + calcTip + '">';
 h += '<div style="font-size:0.95rem;color:#2a1f10;margin-bottom:8px;font-weight:700">Progress toward FY2025 sales (' + fy25Fmt + ')</div>';
